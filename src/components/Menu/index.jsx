@@ -4,25 +4,19 @@ import MenuCard from "../MenuCard/index.jsx";
 import { useState } from "react";
 
 const Menu = () => {
-
   const [selected, setSelected] = useState([]);
   const [selectedDish, setSelectedDish] = useState(null);
 
   const toggleid = (id) => {
     if (selected.includes(id)) {
-      setSelected(selected.filter((d) => d !== id));
+      setSelected(selected.filter((item) => item !== id));
     } else {
       setSelected([...selected, id]);
     }
   };
 
-  const openPopUp = (dish) => {
-    setSelectedDish(dish);
-  };
-
-  const closePopUp = () => {
-    setSelectedDish(null);
-  };
+  const openPopUp = (dish) => setSelectedDish(dish);
+  const closePopUp = () => setSelectedDish(null);
 
   return (
     <div className="menu">
@@ -32,8 +26,8 @@ const Menu = () => {
 
         return (
           <div
-            className="menu-card"
             key={dish.id}
+            className="menu-card"
             onClick={() => openPopUp(dish)}
           >
             <div className="menu-details">
@@ -43,11 +37,13 @@ const Menu = () => {
               <div className="menu-ingr">
                 <details>
                   <summary>Ingredients</summary>
+
                   {dish.ingredients.map((item, index) => (
                     <p key={index}>
                       {item.name} - {item.quantity}
                     </p>
                   ))}
+
                 </details>
               </div>
             </div>
@@ -74,7 +70,10 @@ const Menu = () => {
         );
       })}
       {selectedDish && (
-        <MenuCard dish={selectedDish} closePopUp={closePopUp} />
+        <MenuCard
+          dish={selectedDish}
+          closePopUp={closePopUp}
+        />
       )}
 
     </div>

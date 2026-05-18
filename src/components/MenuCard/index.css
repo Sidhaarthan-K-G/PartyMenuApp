@@ -1,18 +1,18 @@
- /* overlay background */
 .mc-overlay{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.35);
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.4);
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  z-index: 9999;
 }
 
-/* popup card */
 .MenuCard{
     width: 100%;
     max-width: 520px;

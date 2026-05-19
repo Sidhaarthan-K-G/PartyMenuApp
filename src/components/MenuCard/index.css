@@ -67,31 +67,32 @@
     margin-top: 10px;
 }
 
+/* ===================================================== */
+/* 📟 TABLET (keep modal centered + slightly compact) */
+/* ===================================================== */
 
-/* -------- Tablet -------- */
-
-@media (max-width: 768px){
+@media (max-width: 1024px){
 
     .MenuCard{
-        max-width: 90%;
+        max-width: 85%;
         padding: 18px;
     }
 
     .mc-img{
         height: 200px;
     }
-
 }
 
+/* ===================================================== */
+/* 📱 MOBILE (Swiggy-style bottom sheet modal) */
+/* ===================================================== */
 
-/* -------- Mobile -------- */
-
-@media (max-width: 480px){
+@media (max-width: 768px){
 
     .MenuCard{
-        max-width: 100%;
+        max-width: 95%;
+        border-radius: 18px 18px 0 0;
         padding: 16px;
-        border-radius: 16px 16px 0 0;
     }
 
     .mc-img{
@@ -105,5 +106,35 @@
     .MenuCard p{
         font-size: 14px;
     }
+}
 
+/* ===================================================== */
+/* 📱 SMALL MOBILE (tight bottom sheet feel) */
+/* ===================================================== */
+
+@media (max-width: 480px){
+
+    .MenuCard{
+        max-width: 100%;
+        border-radius: 16px 16px 0 0;
+        padding: 14px;
+    }
+
+    .mc-img{
+        height: 160px;
+    }
+
+    .mc-close-btn{
+        font-size: 16px;
+        right: 12px;
+        top: 10px;
+    }
+
+    .MenuCard h2{
+        font-size: 17px;
+    }
+
+    .MenuCard p{
+        font-size: 13px;
+    }
 }

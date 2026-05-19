@@ -284,7 +284,7 @@ const menuData = [
     category: "Sides",
     type: "veg",
     imageUrl:
-      "https://images.unsplash.com/photo-1573140247632-f8fd74997d5c",
+      "https://images.unsplash.com/photo-1601050690597-df0568f70950",
     ingredients: [
       {
         name: "Bread",

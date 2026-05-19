@@ -5,12 +5,15 @@ import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Menu from "./components/Menu";
+import { FilterProvider } from "./context/FilterContext";
 const App = () => {
   return (
     <BrowserRouter>
       <div className="app-container">
-        <Header />
-        <Menu />
+        <FilterProvider>
+          <Header />
+          <Menu />
+        </FilterProvider>
       </div>
     </BrowserRouter>
   );

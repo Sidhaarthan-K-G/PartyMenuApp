@@ -1,9 +1,15 @@
 import "./index.css";
 import { FaSearch, FaCircle } from "react-icons/fa";
-import { BsSquare, BsDot } from "react-icons/bs";
 import { useState } from "react";
+import { useFilter } from "../../context/FilterContext";
+import menuData from "../../data/menu";
 const Header = () => {
-  const [category, setCategory] = useState("");
+  const { category, setCategory, type, setType, search, setSearch, selected } =
+    useFilter();
+  const categoryCount = selected.filter((id) => {
+    const dish = menuData.find((d) => d.id === id);
+    return dish && dish.category === category;
+  }).length;
   return (
     <div className="header">
       <div className="h-search-container">
@@ -11,6 +17,8 @@ const Header = () => {
           type="search"
           className="h-input"
           placeholder="Search dish for your party..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
         />
 
         <FaSearch className="h-search" />
@@ -38,7 +46,7 @@ const Header = () => {
           className="h-btn"
           type="button"
           onClick={() => {
-            setCategory("Desert");
+            setCategory("Dessert");
           }}
         >
           Desert
@@ -55,15 +63,22 @@ const Header = () => {
       </div>
       <div className="h-toggle">
         <p className="h-category-selected">
-          {category ? `${category} Selected()` : ""}
+          {category} selected ({categoryCount})
         </p>
         <div className="h-toggle-container">
-          <button className="h-v-btn">
-            <FaCircle className="h-veg"/>
-          </button>
-          <button className="h-n-btn">
-            <FaCircle className="h-nonveg"/>
-          </button>
+          <div
+            className={`toggle-box ${type === "veg" ? "veg-active" : ""}`}
+            onClick={() => setType("veg")}
+          >
+            <div className="toggle-circle veg"></div>
+          </div>
+
+          <div
+            className={`toggle-box ${type === "nonveg" ? "nonveg-active" : ""}`}
+            onClick={() => setType("nonveg")}
+          >
+            <div className="toggle-circle nonveg"></div>
+          </div>
         </div>
       </div>
     </div>

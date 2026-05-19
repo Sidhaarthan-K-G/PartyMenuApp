@@ -5,45 +5,111 @@
     color: #000000;
     border-radius: 10px;
 }
+
 .header{
     width: 100%;
     background-color: #ffffff;
     padding: 10px;
-    
 }
+
 .h-search{
     color: #000000;
 }
+
 .h-search-container{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
 }
+
 .h-categories{
     margin-top: 10px;
     display: flex;
     gap: 20px;
     justify-content: center;
 }
+
 .h-category-selected{
     color: #000000;
 }
+
+/* ========================= */
+/* 🔥 UPDATED TOGGLE SECTION */
+/* ========================= */
+
 .h-toggle{
     display: flex;
-    justify-content: space-around;
-    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 10px;
 }
+
 .h-toggle-container{
     display: flex;
-    gap: 10px;
+    gap: 15px;
+    align-items: center;
 }
+
+.toggle-box{
+    width: 70px;
+    height: 34px;
+    border-radius: 30px;
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.toggle-circle{
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    transition: 0.3s;
+}
+
+.toggle-circle.veg{
+    background: green;
+}
+
+.toggle-circle.nonveg{
+    background: red;
+}
+
+.veg-active{
+    border: 2px solid green;
+    background: #eaffea;
+}
+
+.nonveg-active{
+    border: 2px solid red;
+    background: #ffeaea;
+}
+
+.veg-active .toggle-circle.veg{
+    left: 38px;
+}
+
+.nonveg-active .toggle-circle.nonveg{
+    left: 38px;
+}
+
+/* ========================= */
+/* existing buttons (unchanged) */
+/* ========================= */
+
 .h-v-btn{
     padding: 12px;
     background-color: #ffffff;
     border: 2px solid green;
     border-radius: 10px;
 }
+
 .h-n-btn{
     padding: 12px;
     background-color: #ffffff;
@@ -55,15 +121,55 @@
     font-size: 15px;
     color: green;
 }
+
 .h-nonveg{
     font-size: 15px;
     color: red;
 }
+
 .h-btn{
     color: #000000;
     background-color: transparent;
     border: 2px solid black;
 }
+
+/* ===================================================== */
+/* 📟 TABLET (1024px) - improve spacing but keep layout */
+/* ===================================================== */
+
+@media (max-width: 1024px){
+
+    .h-input{
+        width: 75%;
+    }
+
+    .h-search-container{
+        gap: 12px;
+    }
+
+    .h-categories{
+        gap: 14px;
+        flex-wrap: wrap;
+        padding: 0 10px;
+    }
+
+    .h-toggle{
+        gap: 15px;
+    }
+
+    .h-toggle-container{
+        gap: 12px;
+    }
+
+    .h-v-btn,
+    .h-n-btn{
+        padding: 10px;
+    }
+}
+
+/* ===================================================== */
+/* 📱 MOBILE (768px) - Swiggy-like stacked refinement */
+/* ===================================================== */
 
 @media (max-width: 768px){
 
@@ -79,15 +185,19 @@
     .h-categories{
         flex-wrap: wrap;
         gap: 10px;
+        justify-content: center;
     }
 
     .h-toggle{
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 10px;
     }
 
     .h-toggle-container{
-        justify-content: center;
+        justify-content: flex-end;
+        gap: 10px;
     }
 
     .h-v-btn,
@@ -100,9 +210,11 @@
         font-size: 14px;
         padding: 8px 12px;
     }
-
 }
 
+/* ===================================================== */
+/* 📱 SMALL MOBILE (480px) - compact Swiggy feel */
+/* ===================================================== */
 
 @media (max-width: 480px){
 
@@ -116,14 +228,25 @@
         font-size: 14px;
     }
 
-    .h-toggle-container{
+    .h-toggle{
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .h-toggle-container{
+        justify-content: center;
+        flex-direction: row;
     }
 
     .h-v-btn,
     .h-n-btn{
         width: 120px;
+        font-size: 13px;
     }
 
+    .h-btn{
+        font-size: 13px;
+        padding: 6px 10px;
+    }
 }

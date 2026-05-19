@@ -1,16 +1,14 @@
 .mc-overlay{
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0,0,0,0.4);
-
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-
-  z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 9999;
 }
 
 .MenuCard{
@@ -23,7 +21,6 @@
     position: relative;
 }
 
-/* popup animation */
 @keyframes slideUp{
     from{
         transform: translateY(100%);
@@ -33,7 +30,6 @@
     }
 }
 
-/* close button */
 .mc-close-btn{
     position: absolute;
     right: 15px;
@@ -42,9 +38,8 @@
     background: transparent;
     font-size: 18px;
     cursor: pointer;
-}
+} 
 
-/* image */
 .mc-img{
     width: 100%;
     height: 220px;
@@ -52,7 +47,6 @@
     border-radius: 10px;
 }
 
-/* text */
 .MenuCard h2{
     margin-top: 10px;
     color: #000;
@@ -62,33 +56,24 @@
     color: #444;
 }
 
-/* ingredients */
 .popup-ingredients{
     margin-top: 10px;
 }
 
-/* ===================================================== */
-/* 📟 TABLET (keep modal centered + slightly compact) */
-/* ===================================================== */
 
 @media (max-width: 1024px){
-
     .MenuCard{
-        max-width: 85%;
-        padding: 18px;
+    max-width: 85%;
+    padding: 18px;
     }
 
     .mc-img{
-        height: 200px;
+    height: 200px;
     }
 }
 
-/* ===================================================== */
-/* 📱 MOBILE (Swiggy-style bottom sheet modal) */
-/* ===================================================== */
 
 @media (max-width: 768px){
-
     .MenuCard{
         max-width: 95%;
         border-radius: 18px 18px 0 0;
@@ -108,33 +93,29 @@
     }
 }
 
-/* ===================================================== */
-/* 📱 SMALL MOBILE (tight bottom sheet feel) */
-/* ===================================================== */
 
 @media (max-width: 480px){
-
     .MenuCard{
-        max-width: 100%;
-        border-radius: 16px 16px 0 0;
-        padding: 14px;
+    max-width: 100%;
+    border-radius: 16px 16px 0 0;
+    padding: 14px;
     }
 
     .mc-img{
-        height: 160px;
+    height: 160px;
     }
 
     .mc-close-btn{
-        font-size: 16px;
-        right: 12px;
-        top: 10px;
+    font-size: 16px;
+    right: 12px;
+    top: 10px;
     }
 
     .MenuCard h2{
-        font-size: 17px;
+    font-size: 17px;
     }
 
     .MenuCard p{
-        font-size: 13px;
+    font-size: 13px;
     }
 }

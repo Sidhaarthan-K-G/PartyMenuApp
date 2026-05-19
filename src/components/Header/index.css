@@ -34,10 +34,6 @@
     color: #000000;
 }
 
-/* ========================= */
-/* 🔥 UPDATED TOGGLE SECTION */
-/* ========================= */
-
 .h-toggle{
     display: flex;
     justify-content: center;
@@ -99,10 +95,6 @@
     left: 38px;
 }
 
-/* ========================= */
-/* existing buttons (unchanged) */
-/* ========================= */
-
 .h-v-btn{
     padding: 12px;
     background-color: #ffffff;
@@ -142,7 +134,6 @@
 }
 
 @media (max-width: 1024px){
-
     .h-input{
         width: 75%;
     }
@@ -180,7 +171,6 @@
 }
 
 @media (max-width: 768px){
-
     .h-input{
         width: 90%;
     }

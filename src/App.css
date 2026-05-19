@@ -6,8 +6,9 @@ html,
 body {
   margin: 0;
   overflow-x: hidden;
-  background-color: #1f1f1f;
+  background-color: #ffffff;
   font-family: sans-serif;
+  color: #000;
 }
 
 .app-container {

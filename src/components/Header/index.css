@@ -132,10 +132,14 @@
     background-color: transparent;
     border: 2px solid black;
 }
-
-/* ===================================================== */
-/* 📟 TABLET (1024px) - improve spacing but keep layout */
-/* ===================================================== */
+.h-btn.active {
+    background: orange;
+    color: white;
+    border-width: 0px;
+}
+.h-btn:focus {
+    outline: none;
+}
 
 @media (max-width: 1024px){
 
@@ -149,7 +153,7 @@
 
     .h-categories{
         gap: 14px;
-        flex-wrap: wrap;
+        display: flex;
         padding: 0 10px;
     }
 
@@ -165,11 +169,15 @@
     .h-n-btn{
         padding: 10px;
     }
+    .h-btn.active {
+        background: orange;
+        color: white;
+        border-width: 0px;
+    }
+    .h-btn:focus {
+        outline: none;
+    }
 }
-
-/* ===================================================== */
-/* 📱 MOBILE (768px) - Swiggy-like stacked refinement */
-/* ===================================================== */
 
 @media (max-width: 768px){
 
@@ -183,7 +191,7 @@
     }
 
     .h-categories{
-        flex-wrap: wrap;
+        display: flex;
         gap: 10px;
         justify-content: center;
     }
@@ -210,11 +218,17 @@
         font-size: 14px;
         padding: 8px 12px;
     }
+    .h-btn.active {
+        background: orange;
+        color: white;
+        border-width: 0px;
+    }
+    .h-btn:focus {
+        outline: none;
+    }
 }
 
-/* ===================================================== */
-/* 📱 SMALL MOBILE (480px) - compact Swiggy feel */
-/* ===================================================== */
+
 
 @media (max-width: 480px){
 
@@ -225,6 +239,7 @@
 
     .h-categories{
         gap: 8px;
+        display: flex;
         font-size: 14px;
     }
 

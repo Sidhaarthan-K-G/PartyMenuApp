@@ -16,16 +16,14 @@ const Header = () => {
         <input
           type="search"
           className="h-input"
-          placeholder="Search dish for your party..."
+          placeholder="Search dish for your party...   🔍"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
-
-        <FaSearch className="h-search" />
       </div>
       <div className="h-categories">
         <button
-          className="h-btn"
+          className={`h-btn ${category === "Starter" ? "active" : ""}`}
           type="button"
           onClick={() => {
             setCategory("Starter");
@@ -34,7 +32,7 @@ const Header = () => {
           Starter
         </button>
         <button
-          className="h-btn"
+          className={`h-btn ${category === "Main Course" ? "active" : ""}`}
           type="button"
           onClick={() => {
             setCategory("Main Course");
@@ -43,7 +41,7 @@ const Header = () => {
           Main Course
         </button>
         <button
-          className="h-btn"
+          className={`h-btn ${category === "Dessert" ? "active" : ""}`}
           type="button"
           onClick={() => {
             setCategory("Dessert");
@@ -52,7 +50,7 @@ const Header = () => {
           Desert
         </button>
         <button
-          className="h-btn"
+          className={`h-btn ${category === "Sides" ? "active" : ""}`}
           type="button"
           onClick={() => {
             setCategory("Sides");

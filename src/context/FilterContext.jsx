@@ -4,7 +4,7 @@ const FilterContext = createContext();
 
 export const FilterProvider = ({ children }) => {
   const [category, setCategory] = useState("Starter");
-  const [type, setType] = useState("nonveg");
+  const [type, setType] = useState("veg");
   const [search, setSearch] = useState("");
     const [selected, setSelected] = useState([])
   return (

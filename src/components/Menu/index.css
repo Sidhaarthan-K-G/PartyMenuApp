@@ -99,6 +99,10 @@ hr{
     .menu-details{
         text-align: left;
     }
+    .menu-det{
+        display: flex;
+        justify-content: space-between;
+    }
     .m-img{
         height: 140px;
         width: 140px;
@@ -127,6 +131,11 @@ hr{
         text-align: left;
     }
 
+    .menu-det{
+        display: flex;
+        justify-content: space-between;
+    }
+
     .m-img{
         height: 60px;
         width: 80px;
@@ -147,7 +156,6 @@ hr{
 
 
 @media (max-width: 480px){
-
     .menu-card{
         width: 95%;
         display: flex;
@@ -156,6 +164,10 @@ hr{
     }
     .menu-details{
         text-align: left;
+    }
+    .menu-det{
+        display: flex;
+        justify-content: space-between;
     }
 
     .menu-img{

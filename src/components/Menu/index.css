@@ -81,6 +81,11 @@ hr{
     width: 30px;
     height: 30px;
 }
+.menu-details{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
 @media (max-width: 1024px){
 
     .menu-card{
@@ -90,7 +95,10 @@ hr{
         align-items: center;
         gap: 20px;
     }
-
+    
+    .menu-details{
+        text-align: left;
+    }
     .m-img{
         height: 140px;
         width: 140px;
@@ -114,6 +122,9 @@ hr{
         justify-content: space-between;
         gap: 15px;
         align-items: center;
+    }
+    .menu-details{
+        text-align: left;
     }
 
     .m-img{
@@ -142,6 +153,9 @@ hr{
         display: flex;
         justify-content: center;
         padding: 12px;
+    }
+    .menu-details{
+        text-align: left;
     }
 
     .menu-img{
